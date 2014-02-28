@@ -1,6 +1,6 @@
-# Role Name
+# Ansible Role: Composer
 
-Composer PHP Dependency Manager installation by geerlingguy.
+Installs Composer, the PHP Dependency Manager, on any Linux or UNIX system.
 
 ## Requirements
 
