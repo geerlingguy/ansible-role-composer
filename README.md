@@ -24,7 +24,7 @@ The path where composer will be installed and available to your system. Should b
       roles:
         - { role: geerlingguy.composer }
 
-After the playbook runs, `composer` will be placed in `/usr/local/bin/composer`, and will be accessible from normal system accounts.
+After the playbook runs, `composer` will be placed in `/usr/local/bin/composer` (this location is configurable), and will be accessible via normal system accounts.
 
 ## License
 
