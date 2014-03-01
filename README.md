@@ -8,7 +8,11 @@ None.
 
 ## Role Variables
 
-None.
+Available variables are listed below, along with default values (see `vars/main.yml`):
+
+    composer_path: /usr/local/bin/composer
+
+The path where composer will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `composer` instead of the full path.
 
 ## Dependencies
 
