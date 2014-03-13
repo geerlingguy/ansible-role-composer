@@ -40,4 +40,5 @@ galaxy_info:
     versions:
     - all
   categories:
+    - packaging
     - web
