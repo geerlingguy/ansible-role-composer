@@ -1,6 +1,10 @@
 ---
-- name: "Install Composer into the current directory"
-  shell: curl -sS https://getcomposer.org/installer | php creates={{ composer_path }}
+- name: Install Composer into the current directory.
+  shell: >
+    curl -sS https://getcomposer.org/installer | php
+    creates={{ composer_path }}
 
-- name: "Move Composer into globally-accessible location."
-  shell: mv composer.phar {{ composer_path }} creates={{ composer_path }}
+- name: Move Composer into globally-accessible location.
+  shell: >
+    mv composer.phar {{ composer_path }}
+    creates={{ composer_path }}
