@@ -33,12 +33,5 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
 
-  - composer
-  - find / -name 'composer'
-
   # Check if composer is installed and working.
-  - >
-    composer --version
-    | grep -q 'Composer version'
-    && (echo 'Composer installed and working' && exit 0)
-    || (echo 'Composer is not installed or working' && exit 1)
+  - composer
