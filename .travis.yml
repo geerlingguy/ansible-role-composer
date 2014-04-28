@@ -32,3 +32,10 @@ script:
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
+
+  # Check if composer is installed and working.
+  - >
+    composer --version
+    | grep -q 'Composer version'
+    && (echo 'Composer installed and working' && exit 0)
+    || (echo 'Composer is not installed or working' && exit 1)
