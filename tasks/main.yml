@@ -8,3 +8,10 @@
   shell: >
     mv composer.phar {{ composer_path }}
     creates={{ composer_path }}
+
+- name: Update Composer to latest version (if configured).
+  shell: >
+    php {{ composer_path }} self-update
+  register: composer_update
+  changed_when: "'Updating to version' in composer_update.stdout"
+  when: composer_keep_updated
