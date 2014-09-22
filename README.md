@@ -18,7 +18,7 @@ The path where composer will be installed and available to your system. Should b
 
     composer_keep_updated: false
 
-TODO
+Set this to `true` to update Composer to the latest release every time the playbook is run.
 
 ## Dependencies
 
