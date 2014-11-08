@@ -14,7 +14,10 @@ install:
   - pip install ansible
 
   # Add ansible.cfg to pick up roles path.
-  - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
+  - "printf '[defaults]\n' > ansible.cfg.old"
+  - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
+  - cat ansible.cfg.old
+  - cat ansible.cfg
 
   # Install required dependencies.
   - ansible-galaxy install geerlingguy.php
