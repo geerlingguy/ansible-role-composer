@@ -1,4 +1,12 @@
 ---
+- name: Ensure curl is installed (RedHat).
+  yum: pkg=curl state=installed
+  when: ansible_os_family == 'RedHat'
+
+- name: Ensure curl is installed (Debian).
+  apt: pkg=curl state=installed
+  when: ansible_os_family == 'Debian'
+
 - name: Install Composer into the current directory.
   shell: >
     curl -sS https://getcomposer.org/installer | php
