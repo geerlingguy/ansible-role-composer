@@ -6,7 +6,7 @@ Installs Composer, the PHP Dependency Manager, on any Linux or UNIX system.
 
 ## Requirements
 
-`curl` and `php` (version 5.3+) should be installed and working.
+`curl` and `php` (version 5.4+) should be installed and working.
 
 ## Role Variables
 
@@ -20,9 +20,17 @@ The path where composer will be installed and available to your system. Should b
 
 Set this to `true` to update Composer to the latest release every time the playbook is run.
 
+    composer_home_path: '~/.composer'
+
+The COMPOSER_HOME path; this is the directory where global packages will be installed.
+
+    composer_global_packages: {}
+
+A list of packages to install globally (using `composer global require`). If you want to install any packages globally, add a list item with a dictionary with the `name` of the package and a `release`, e.g. `- { name: phpunit/phpunit, release: "4.7.*" }`. The 'release' is optional, and defaults to `@stable`.
+
 ## Dependencies
 
-  - geerlingguy.php (Installs PHP).
+None (but make sure you've installed PHP; the `geerlingguy.php` role is recommended).
 
 ## Example Playbook
 

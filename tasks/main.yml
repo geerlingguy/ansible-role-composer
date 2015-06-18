@@ -23,3 +23,6 @@
   register: composer_update
   changed_when: "'Updating to version' in composer_update.stdout"
   when: composer_keep_updated
+
+- include: global-require.yml
+  when: composer_global_packages|length > 0

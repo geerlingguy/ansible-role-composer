@@ -1,0 +1,13 @@
+---
+- name: Ensure composer directory exists.
+  file:
+    path: "{{ composer_home_path }}"
+    state: directory
+
+- name: Install configured globally-required packages.
+  shell: >
+    COMPOSER_HOME={{ composer_home_path }}
+    composer global require {{ item.name }}:{{ item.release | default('@stable') }} --no-progress
+    creates={{ composer_home_path }}/vendor/{{ item.name }}
+  register: composer_global_require_result
+  with_items: composer_global_packages
