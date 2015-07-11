@@ -10,3 +10,5 @@ composer_home_path: '~/.composer'
 composer_global_packages: []
   # - { name: phpunit/phpunit, release: "4.7.x" }
   # - { name: phpunit/phpunit, release: "@stable" }
+
+composer_add_to_path: true

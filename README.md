@@ -28,6 +28,10 @@ The COMPOSER_HOME path; this is the directory where global packages will be inst
 
 A list of packages to install globally (using `composer global require`). If you want to install any packages globally, add a list item with a dictionary with the `name` of the package and a `release`, e.g. `- { name: phpunit/phpunit, release: "4.7.*" }`. The 'release' is optional, and defaults to `@stable`.
 
+    composer_add_to_path: true
+
+If `true`, and if there are any configured `composer_global_packages`, the `vendor/bin` directory inside `composer_home_path` will be added to the system's default `$PATH` (for all users).
+
 ## Dependencies
 
 None (but make sure you've installed PHP; the `geerlingguy.php` role is recommended).

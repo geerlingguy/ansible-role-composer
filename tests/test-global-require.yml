@@ -2,6 +2,10 @@
 - hosts: localhost
   remote_user: root
 
+  vars:
+    composer_global_packages:
+      - { name: phpunit/phpunit, release: "@stable" }
+
   roles:
     - geerlingguy.php
     - ansible-role-composer
