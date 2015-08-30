@@ -1,6 +1,5 @@
 ---
-dependencies:
-  - { role: geerlingguy.php }
+dependencies: []
 
 galaxy_info:
   author: geerlingguy
