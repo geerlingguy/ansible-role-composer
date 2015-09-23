@@ -1,20 +1,19 @@
 ---
-- name: Ensure curl is installed (RedHat).
-  yum: name=curl state=installed
-  when: ansible_os_family == 'RedHat'
+- name: Download Composer installer.
+  get_url:
+    url: https://getcomposer.org/installer
+    dest: /tmp/composer-installer.php
+    mode: 0755
 
-- name: Ensure curl is installed (Debian).
-  apt: name=curl state=installed
-  when: ansible_os_family == 'Debian'
-
-- name: Install Composer into the current directory.
-  shell: >
-    curl -sS https://getcomposer.org/installer | php
-    creates={{ composer_path }}
+- name: Run Composer installer.
+  command: >
+    php composer-installer.php
+    chdir=/tmp
+    creates=/usr/local/bin/composer
 
 - name: Move Composer into globally-accessible location.
   shell: >
-    mv composer.phar {{ composer_path }}
+    mv /tmp/composer.phar {{ composer_path }}
     creates={{ composer_path }}
 
 - name: Update Composer to latest version (if configured).

@@ -6,7 +6,7 @@ Installs Composer, the PHP Dependency Manager, on any Linux or UNIX system.
 
 ## Requirements
 
-`curl` and `php` (version 5.4+) should be installed and working.
+`php` (version 5.4+) should be installed and working.
 
 ## Role Variables
 
