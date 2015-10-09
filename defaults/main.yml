@@ -13,5 +13,5 @@ composer_global_packages: []
 
 composer_add_to_path: true
 
-# A github oauth token
+# GitHub OAuth token (used to help overcome API rate limits).
 composer_github_oauth_token: ''

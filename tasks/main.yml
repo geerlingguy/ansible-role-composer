@@ -23,8 +23,16 @@
   changed_when: "'Updating to version' in composer_update.stdout"
   when: composer_keep_updated
 
+- name: Ensure composer directory exists.
+  file:
+    path: "{{ composer_home_path }}"
+    state: directory
+
+- name: Add GitHub OAuth token for Composer (if configured).
+  template:
+    src: "auth.json.j2"
+    dest: "{{ composer_home_path }}/auth.json"
+  when: composer_github_oauth_token
+
 - include: global-require.yml
   when: composer_global_packages|length > 0
-
-- include: configure-github-aouth-token.yml
-  when: composer_github_oauth_token != ''

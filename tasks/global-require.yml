@@ -1,9 +1,4 @@
 ---
-- name: Ensure composer directory exists.
-  file:
-    path: "{{ composer_home_path }}"
-    state: directory
-
 - name: Install configured globally-required packages.
   shell: >
     COMPOSER_HOME={{ composer_home_path }}
