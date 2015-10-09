@@ -12,3 +12,6 @@ composer_global_packages: []
   # - { name: phpunit/phpunit, release: "@stable" }
 
 composer_add_to_path: true
+
+# A github oauth token
+composer_github_oauth_token: ''

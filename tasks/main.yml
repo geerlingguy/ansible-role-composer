@@ -25,3 +25,6 @@
 
 - include: global-require.yml
   when: composer_global_packages|length > 0
+
+- include: configure-github-aouth-token.yml
+  when: composer_github_oauth_token != ''
