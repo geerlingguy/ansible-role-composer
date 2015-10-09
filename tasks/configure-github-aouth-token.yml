@@ -1,0 +1,11 @@
+---
+
+- name: Ensure composer directory exists.
+  file:
+    path: "{{ composer_home_path }}"
+    state: directory
+
+- name: Composer configures github oauth token
+  template:
+    src: "auth.json.j2"
+    dest: "{{ composer_home_path }}/auth.json"
