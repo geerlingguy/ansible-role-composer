@@ -13,5 +13,9 @@ composer_global_packages: []
 
 composer_add_to_path: true
 
+
+composer_home_path_owner: "{{ default(omit) }}"
+composer_home_path_group: "{{ default(omit) }}"
+
 # GitHub OAuth token (used to help overcome API rate limits).
 composer_github_oauth_token: ''
