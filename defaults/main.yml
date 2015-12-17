@@ -13,8 +13,8 @@ composer_global_packages: []
 
 composer_add_to_path: true
 
-composer_home_path_owner: "root"
-composer_home_path_group: "root"
+composer_home_owner: "root"
+composer_home_group: "root"
 
 # GitHub OAuth token (used to help overcome API rate limits).
 composer_github_oauth_token: ''

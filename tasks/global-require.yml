@@ -1,7 +1,7 @@
 ---
 - name: Install configured globally-required packages.
   sudo: yes
-  sudo_user: "{{ composer_home_path_owner }}"
+  sudo_user: "{{ composer_home_owner }}"
   shell: >
     COMPOSER_HOME={{ composer_home_path }}
     composer global require {{ item.name }}:{{ item.release | default('@stable') }} --no-progress
