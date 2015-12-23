@@ -36,6 +36,10 @@ If `true`, and if there are any configured `composer_global_packages`, the `vend
 
 GitHub OAuth token, used to avoid GitHub API rate limiting errors when building and rebuilding applications using Composer. Follow GitHub's directions to [Create a personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) if you run into these rate limit errors.
 
+    php_executable: php
+
+The executable name or full path to the PHP executable. This is defaulted to `php` if you don't override the variable.
+
 ## Dependencies
 
 None (but make sure you've installed PHP; the `geerlingguy.php` role is recommended).
