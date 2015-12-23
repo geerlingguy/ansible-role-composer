@@ -21,8 +21,10 @@ The path where composer will be installed and available to your system. Should b
 Set this to `true` to update Composer to the latest release every time the playbook is run.
 
     composer_home_path: '~/.composer'
+    composer_home_owner: root
+    composer_home_group: root
 
-The COMPOSER_HOME path; this is the directory where global packages will be installed.
+The `COMPOSER_HOME` path and directory ownership; this is the directory where global packages will be installed.
 
     composer_global_packages: {}
 
