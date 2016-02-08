@@ -36,3 +36,6 @@ script:
 
   # Check if composer is installed and working.
   - composer
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
