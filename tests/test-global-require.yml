@@ -3,6 +3,7 @@
   remote_user: root
 
   vars:
+    php_enable_webserver: false
     composer_global_packages:
       - { name: phpunit/phpunit, release: "@stable" }
 
