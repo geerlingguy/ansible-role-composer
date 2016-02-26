@@ -34,6 +34,13 @@
   changed_when: "'Updating to version' in composer_update.stdout"
   when: composer_keep_updated
 
+- name: Reset Composer to fixed version (if configured).
+  shell: >
+    {{ php_executable }} {{ composer_path }} self-update {{composer_keep_version}}
+  register: composer_update
+  changed_when: "'Updating to version' in composer_update.stdout"
+  when: composer_keep_version != ''
+
 - name: Ensure composer directory exists.
   file:
     path: "{{ composer_home_path }}"

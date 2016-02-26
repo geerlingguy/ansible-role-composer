@@ -21,6 +21,10 @@ The path where composer will be installed and available to your system. Should b
 
 Set this to `true` to update Composer to the latest release every time the playbook is run.
 
+    composer_keep_version: ""
+
+Set this to `VERSION` to reset Composer to a specific release every time the playbook is run. Use when Composer has introduced a regression in its latest release.
+
     composer_home_path: '~/.composer'
     composer_home_owner: root
     composer_home_group: root
