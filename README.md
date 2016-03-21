@@ -29,7 +29,7 @@ The `COMPOSER_HOME` path and directory ownership; this is the directory where gl
 
     composer_version: ''
 
-You can install a specific release of Composer, e.g. `composer_version: '1.0.0-alpha11'`. If left empty the latest development version will be installed. Note that `composer_keep_updated` will override this variable, as it will always install the latest development version. 
+You can install a specific release of Composer, e.g. `composer_version: '1.0.0-alpha11'`. If left empty the latest development version will be installed. Note that `composer_keep_updated` will override this variable, as it will always install the latest development version.
 
     composer_global_packages: {}
 
