@@ -43,7 +43,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
 
   # Ensure Composer is installed and working.
-  - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm composer'
+  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm composer'
 
   # Clean up
   - 'sudo docker stop "$(cat ${container_id})"'
