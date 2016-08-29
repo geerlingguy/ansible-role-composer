@@ -11,6 +11,11 @@
       - name: phpunit/phpunit
         release: "@stable"
 
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes
+      when: ansible_distribution == 'Ubuntu'
+
   roles:
     - role: geerlingguy.repo-remi
       when: ansible_os_family == 'RedHat'
