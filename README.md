@@ -39,13 +39,13 @@ A list of packages to install globally (using `composer global require`). If you
 
 If `true`, and if there are any configured `composer_global_packages`, the `vendor/bin` directory inside `composer_home_path` will be added to the system's default `$PATH` (for all users).
 
-    composer_project_path: /path/to/project
+    composer_project_path: /path/to/project/vendor/bin
 
-Path to a composer project.
+Path to a composer project bin-dir directory.
 
     composer_add_project_to_path: false
 
-If `true`, and if you have configured a `composer_project_path`, the `vendor/bin` directory inside `composer_project_path` will be added to the system's default `$PATH` (for all users).
+If `true`, and if you have configured a `composer_project_path`, `composer_project_path` will be added to the system's default `$PATH` (for all users).
 
     composer_github_oauth_token: ''
 
