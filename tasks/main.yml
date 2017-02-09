@@ -42,6 +42,8 @@
     state: directory
 
 - name: Add GitHub OAuth token for Composer (if configured).
+  become: yes
+  become_user: "{{ composer_home_owner }}"
   template:
     src: "auth.json.j2"
     dest: "{{ composer_home_path }}/auth.json"
