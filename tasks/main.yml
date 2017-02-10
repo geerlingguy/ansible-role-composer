@@ -54,5 +54,8 @@
 - include: global-require.yml
   when: composer_global_packages|length > 0
 
+- include: project-init.yml
+  when: composer_project_path is defined
+
 - include: project-bin.yml
   when: composer_add_project_to_path

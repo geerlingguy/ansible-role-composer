@@ -1,0 +1,12 @@
+---
+- name: Check for project composer.json file.
+  stat:
+    path: "{{ composer_project_path }}/composer.json"
+  register: composer_file
+
+- composer:
+    command: install
+    working_dir: "{{ composer_project_path }}"
+    no_dev: "{{ composer_project_no_dev }}"
+  become: no
+  when: composer_file.stat.exists

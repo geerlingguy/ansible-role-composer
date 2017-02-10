@@ -41,7 +41,11 @@ If `true`, and if there are any configured `composer_global_packages`, the `vend
 
     composer_project_path: /path/to/project
 
-Path to a composer project.
+Path to a composer project to run install.
+    
+    composer_project_no_dev: no
+    
+Disables installation require-dev packages
 
     composer_add_project_to_path: false
 

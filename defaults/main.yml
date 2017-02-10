@@ -22,3 +22,6 @@ composer_add_project_to_path: false
 
 # GitHub OAuth token (used to help overcome API rate limits).
 composer_github_oauth_token: ''
+
+#composer_project_path: /path/to/project
+composer_project_no_dev: no
