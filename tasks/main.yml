@@ -22,6 +22,7 @@
   when: not composer_bin.stat.exists
 
 - name: Move Composer into globally-accessible location.
+  become: true
   shell: >
     mv /tmp/composer.phar {{ composer_path }}
     creates={{ composer_path }}

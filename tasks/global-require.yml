@@ -11,6 +11,7 @@
   with_items: "{{ composer_global_packages }}"
 
 - name: Add composer_home_path bin directory to global $PATH.
+  become: true
   template:
     src: composer.sh.j2
     dest: /etc/profile.d/composer.sh
