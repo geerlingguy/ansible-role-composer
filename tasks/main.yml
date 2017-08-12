@@ -14,6 +14,8 @@
     dest: /tmp/composer-installer.php
     mode: 0755
   when: not composer_bin.stat.exists
+  retries: 3
+  delay: 5
 
 - name: Run Composer installer.
   command: >
