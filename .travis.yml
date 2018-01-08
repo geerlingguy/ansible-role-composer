@@ -3,7 +3,7 @@ services: docker
 
 env:
   - distro: centos7
-  - distro: fedora24
+  - distro: fedora27
   - distro: ubuntu1604
   - distro: debian8
 
