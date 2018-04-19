@@ -22,3 +22,6 @@ composer_add_project_to_path: false
 
 # GitHub OAuth token (used to help overcome API rate limits).
 composer_github_oauth_token: ''
+
+# Force composer to use SSL connections.
+composer_enforce_ssl: false

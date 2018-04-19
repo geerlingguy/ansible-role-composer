@@ -51,6 +51,16 @@
     group: "{{ composer_home_group }}"
   when: composer_github_oauth_token != ''
 
+- name: Configure composer to only use ssl (if configured).
+  become: yes
+  become_user: "{{ composer_home_owner }}"
+  template:
+    src: "config.json"
+    dest: "{{ composer_home_path }}/config.json"
+    owner: "{{ composer_home_owner }}"
+    group: "{{ composer_home_group }}"
+  when: composer_enforce_ssl == true
+
 - include: global-require.yml
   when: composer_global_packages|length > 0
 

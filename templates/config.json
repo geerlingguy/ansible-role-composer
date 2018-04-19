@@ -1,0 +1,13 @@
+{
+  "config": {
+    "github-protocols": [
+      "https,ssh"
+    ]
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.org"
+    }
+  }
+}
