@@ -1,5 +1,11 @@
 {
     "github-oauth": {
         "github.com": "{{ composer_github_oauth_token }}"
+    },
+    "bitbucket-oauth": {
+        "bitbucket.org": {
+            "consumer-key": "{{ composer_bitbucket_consumer_secret }}",
+            "consumer-secret": "{{ composer_bitbucket_consumer_secret }}"
+        }
     }
 }
