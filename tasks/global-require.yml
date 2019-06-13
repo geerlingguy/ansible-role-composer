@@ -1,8 +1,11 @@
 ---
 - name: Install configured globally-required packages.
-  command: >
-    {{ composer_path }} global require {{ item.name }}:{{ item.release | default('@stable') }} --no-progress --no-interaction
-    creates={{ composer_home_path }}/vendor/{{ item.name }}
+  command:
+    cmd: >
+      {{ php_executable }} {{ composer_path }}
+      global require --no-progress --no-interaction
+      {{ item.name }}:{{ item.release | default('@stable') }}
+    creates: "{{ composer_home_path }}/vendor/{{ item.name }}"
   environment:
     COMPOSER_HOME: "{{ composer_home_path }}"
   become: true
