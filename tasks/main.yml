@@ -1,4 +1,9 @@
 ---
+- name: Ensure patch command is present for composer-patches
+  package:
+    name: patch
+    state: present
+
 - name: Set php_executable variable to a default if not defined.
   set_fact:
     php_executable: php
