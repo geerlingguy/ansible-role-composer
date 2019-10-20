@@ -43,6 +43,8 @@
   when: composer_keep_updated | bool
 
 - name: Ensure composer directory exists.
+  become: true
+  become_user: "{{ composer_home_owner }}"
   file:
     path: "{{ composer_home_path }}"
     owner: "{{ composer_home_owner }}"
