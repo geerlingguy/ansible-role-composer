@@ -1,6 +1,6 @@
 # Ansible Role: Composer
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-composer.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-composer)
+[![Build Status](https://travis-ci.com/geerlingguy/ansible-role-composer.svg?branch=master)](https://travis-ci.com/geerlingguy/ansible-role-composer)
 
 Installs Composer, the PHP Dependency Manager, on any Linux or UNIX system.
 
