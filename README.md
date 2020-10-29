@@ -31,9 +31,9 @@ The `COMPOSER_HOME` path and directory ownership; this is the directory where gl
 
 You can install a specific release of Composer, e.g. `composer_version: '1.0.0-alpha11'`. If left empty the latest development version will be installed. Note that `composer_keep_updated` will override this variable, as it will always install the latest development version.
 
-    composer_version_branch: '--1'
+    composer_version_branch: '--2'
 
-You can choose which major branch of composer you wish to use. Default is `--1` as the version 2 of composer just got release and may not be compatible yet. Note that `composer_keep_updated` will update the latest version available for this branch.
+You can choose which major branch of composer you wish to use. Default is `--2`. Note that `composer_keep_updated` will update the latest version available for this branch.
 
     composer_global_packages: []
 
