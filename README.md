@@ -59,6 +59,13 @@ GitHub OAuth token, used to avoid GitHub API rate limiting errors when building 
 
 The executable name or full path to the PHP executable. This is defaulted to `php` if you don't override the variable.
 
+### Staying on Composer 1
+
+While projects are upgrading to support Composer 2, it may be helpful to run Composer 1 instead. To do that, set these variables:
+
+    composer_version_branch: ''
+    composer_version: '1.10.12'
+
 ## Dependencies
 
 None (but make sure you've installed PHP; the `geerlingguy.php` role is recommended).
