@@ -4,6 +4,11 @@
     php_executable: php
   when: php_executable is not defined
 
+- name: Install prerequisite.
+  package:
+    name: unzip
+    state: present
+
 - name: Check if Composer is installed.
   stat: "path={{ composer_path }}"
   register: composer_bin
