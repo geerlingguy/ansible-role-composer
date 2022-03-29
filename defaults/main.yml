@@ -23,3 +23,8 @@ composer_add_project_to_path: false
 
 # GitHub OAuth token (used to help overcome API rate limits).
 composer_github_oauth_token: ''
+
+# GitLab access token
+composer_gitlab_access_token: ''
+# GitLab domain to connect to
+composer_gitlab_domain: gitlab.com

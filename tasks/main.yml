@@ -52,7 +52,7 @@
     state: directory
     mode: 0755
 
-- name: Add GitHub OAuth token for Composer (if configured).
+- name: Add GitHub/GitLab OAuth/access tokens for Composer (if configured).
   become: true
   become_user: "{{ composer_home_owner }}"
   template:
@@ -61,7 +61,7 @@
     owner: "{{ composer_home_owner }}"
     group: "{{ composer_home_group }}"
     mode: 0644
-  when: composer_github_oauth_token | length > 0
+  when: composer_github_oauth_token | length > 0 or composer_gitlab_access_token | length > 0
 
 - include_tasks: global-require.yml
   when: composer_global_packages | length > 0

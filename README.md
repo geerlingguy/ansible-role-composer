@@ -55,6 +55,11 @@ If `true`, and if you have configured a `composer_project_path`, the `vendor/bin
 
 GitHub OAuth token, used to avoid GitHub API rate limiting errors when building and rebuilding applications using Composer. Follow GitHub's directions to [Create a personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) if you run into these rate limit errors.
 
+    composer_gitlab_access_token: ''
+    composer_gitlab_domain: gitlab.com
+
+GitLab access token and domain to connect to. Follow GitLab's directions to [Create a personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). If you host GitLab yourself or want to use another instance than gitlab.com, overwrite `composer_gitlab_domain`.
+
     php_executable: php
 
 The executable name or full path to the PHP executable. This is defaulted to `php` if you don't override the variable.
