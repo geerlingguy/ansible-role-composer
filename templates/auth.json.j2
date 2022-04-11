@@ -1,12 +1,12 @@
 {
 {% if composer_github_oauth_token | length > 0 %}
     "github-oauth": {
-      "github.com": "{{ composer_github_oauth_token }}"
+        "github.com": "{{ composer_github_oauth_token }}"
     },
 {% endif %}
 {% if composer_gitlab_access_token | length > 0 %}
     "gitlab-token": {
-      "{{ composer_gitlab_domain }}": "{{ composer_gitlab_access_token }}"
+        "{{ composer_gitlab_domain }}": "{{ composer_gitlab_access_token }}"
     },
 {% endif %}
 }
