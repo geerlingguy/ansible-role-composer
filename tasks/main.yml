@@ -1,4 +1,10 @@
 ---
+- name: Check if requested version parameters are valid
+  fail:
+    msg: You cannot request a specific version AND keep the composer up to date.
+      Set either composer_version or composer_keep_updated, but not both.
+  when: composer_version != '' and composer_keep_updated
+
 - name: Set php_executable variable to a default if not defined.
   set_fact:
     php_executable: php
