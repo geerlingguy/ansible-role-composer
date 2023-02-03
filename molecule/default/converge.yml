@@ -6,6 +6,7 @@
   vars:
     php_enablerepo: "remi,remi-php82"
     php_enable_webserver: false
+    php_version: '8.2'
 
     # Test a global requirement.
     composer_global_packages:
@@ -35,5 +36,6 @@
     - role: geerlingguy.repo-remi
       when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
     - role: geerlingguy.git
+    - role: geerlingguy.php-versions
     - role: geerlingguy.php
     - role: geerlingguy.composer

@@ -2,3 +2,4 @@
 - src: geerlingguy.repo-remi
 - src: geerlingguy.git
 - src: geerlingguy.php
+- src: geerlingguy.php-versions
