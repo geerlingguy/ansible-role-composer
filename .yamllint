@@ -7,5 +7,4 @@ rules:
     level: warning
 
 ignore: |
-  .github/stale.yml
-  .travis.ci
+  .github/workflows/stale.yml
