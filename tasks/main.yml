@@ -18,6 +18,7 @@
   uri:
     url: https://composer.github.io/installer.sig
     return_content: true
+  check_mode: false
   register: composer_installer_signature
   when: not composer_bin.stat.exists
 
