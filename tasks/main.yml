@@ -49,6 +49,13 @@
   changed_when: "'Updating to version' in composer_update.stdout"
   when: composer_keep_updated | bool
 
+- name: Update Composer to desired version (if configured).
+  command: >
+    {{ php_executable }} {{ composer_path }} self-update {{ composer_version }}
+  register: composer_update
+  changed_when: "'Upgrading to version' in composer_update.stdout or 'Updating to version' in composer_update.stdout"
+  when: composer_version != ''
+
 - name: Ensure composer directory exists.
   become: true
   become_user: "{{ composer_home_owner }}"
