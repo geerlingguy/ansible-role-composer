@@ -41,7 +41,8 @@ jobs:
     strategy:
       matrix:
         distro:
-          - rockylinux9
+          # See: https://github.com/geerlingguy/docker-rockylinux9-ansible/issues/6
+          # - rockylinux9
           - ubuntu2204
           - debian11
 
