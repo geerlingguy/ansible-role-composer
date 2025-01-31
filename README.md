@@ -1,6 +1,6 @@
 # Ansible Role: Composer
 
-[![CI](https://github.com/geerlingguy/ansible-role-composer/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-composer/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-composer/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-composer/actions/workflows/ci.yml)
 
 Installs Composer, the PHP Dependency Manager, on any Linux or UNIX system.
 
