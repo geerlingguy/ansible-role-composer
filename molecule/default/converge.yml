@@ -16,7 +16,7 @@
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=yes cache_valid_time=600
-      when: ansible_os_family == 'Debian'
+      when: ansible_facts.os_family == 'Debian'
 
     - name: Set php_packages for Fedora install.
       set_fact:
@@ -30,11 +30,11 @@
           - php-pecl-apcu
           - php-xml
           - php-json
-      when: ansible_distribution == 'Fedora'
+      when: ansible_facts.distribution == 'Fedora'
 
   roles:
     - role: geerlingguy.repo-remi
-      when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
+      when: ansible_facts.os_family == 'RedHat' and ansible_facts.distribution != 'Fedora'
     - role: geerlingguy.git
     - role: geerlingguy.php-versions
     - role: geerlingguy.php
