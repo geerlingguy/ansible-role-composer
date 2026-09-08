@@ -43,8 +43,8 @@ jobs:
         distro:
           # See: https://github.com/geerlingguy/docker-rockylinux9-ansible/issues/6
           # - rockylinux9
-          - ubuntu2204
-          - debian11
+          - ubuntu2404
+          - debian12
 
     steps:
       - name: Check out the codebase.
